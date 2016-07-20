@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All tasks</title>
+</head>
+<body>
+    <h1>Seznam taskov</h1>
+    {% for task in tasks %}
+       <h2>Task name is: {{ task.name }}</h2>
+       <a href="/single-task/{{ task.key.id() }}">
+       <ul>
+           <li>Task id: {{ task.key.id() }}</li>
+           <li>Task message: {{ task.message }}</li>
+           <li>Task message2: {{ task.message2 }}</li>
+           <li>Task checked: {{ task.checked }}</li>
+           <li>Task date: {{ task.date }}</li>
+       </ul>
+       </a>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit True task</title>
+</head>
+<body>
+    <h1>Task edit</h1>
+    <form action="/single-task-t/{{ task.key.id() }}/edit-finally" method="post">
+        <label for="t_name">Edit the value of tasks name:</label>
+        <input name="task_name_t" value="{{ task.name }}" id="t_name">
+        <br>
+        <br>
+        <label for="t_message">Edit the value of tasks message:</label>
+        <input name="task_message_t" value="{{ task.message }}" id="t_message">
+        <br>
+        <br>
+        <label for="t_message2">Edit the value of tasks message:</label>
+        <input name="task_message2_t" value="{{ task.message2 }}" id="t_message2">
+        <br>
+        <br>
+        <label for="check_task">Check if task was completed:</label>
+        <input type="checkbox" name="task_check_t" value="{{ task.checked }}" id="check_task">
+        <br>
+        <br>
+        <label for="check_deletion">Check the value of deleted task (false value):</label>
+        <input type="checkbox" name="task_delete_t" value="{{ task.deleted }}" id="check_deletion">
+        <br>
+        <br>
+        <button type="submit">Edit true task</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+

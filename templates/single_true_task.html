@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single True Task</title>
+</head>
+<body>
+    <h1>Single deleted task</h1>
+
+    <p>Task id: {{ task.key.id() }}</p>
+    <p>Task message: {{ task.message }}</p>
+    <p>Task message2: {{ task.message2 }}</p>
+    <p>Task checked: {{ task.checked }}</p>
+    <p>Task date: {{ task.date }}</p>
+    <a href="/single-task-t/{{ task.key.id() }}/edit-finally">Edit task</a>
+    <a href="/single-task-t/{{ task.key.id() }}/delete-finally">Delete task</a>
+</body>
+</html>

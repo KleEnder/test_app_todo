@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task edit</title>
+</head>
+<body>
+    <h1>Task edit</h1>
+    <form action="/single-task/{{ task.key.id() }}/edit" method="post">
+        <label for="t_name">Edit the value of tasks name:</label>
+        <input name="task_name" value="{{ task.name }}" id="t_name">
+        <br>
+        <br>
+        <label for="t_message">Edit the value of tasks message:</label>
+        <input name="task_message" value="{{ task.message }}" id="t_message">
+        <br>
+        <br>
+        <label for="t_message2">Edit the value of tasks message:</label>
+        <input name="task_message2" value="{{ task.message2 }}" id="t_message2">
+        <br>
+        <br>
+        <label for="check_task">Check if task was completed:</label>
+        <input type="checkbox" name="task_check" value="{{ task.checked }}" id="check_task">
+        <br>
+        <br>
+        <button type="submit">Edit task</button>
+    </form>
+</body>
+</html>

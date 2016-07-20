@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="main">
+        <title>Registration form</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Registration of new user</h1>
+
+    <form action="/registration" method="post">
+        <label for="name">Name here</label>
+        <input placeholder="Enter your name" name="reg_name" id="name">
+        <br>
+        <br>
+        <label for="surname">Surname here</label>
+        <input placeholder="Enter your surname" name="reg_surname" id="surname">
+        <br>
+        <br>
+        <label for="email">Email here</label>
+        <input placeholder="Enter your email" name="reg_email" id="email" type="email">
+        <br>
+        <br>
+        <label for="pass">Password here</label>
+        <input placeholder="Enter your password" name="reg_pass" id="pass" type="password">
+        <br>
+        <br>
+        <label for="pass2">Reenter password here</label>
+        <input placeholder="Reenter your password" name="reg_pass2" id="pass2" type="password">
+        <br>
+        <br>
+        <button type="submit">Submit registration</button>
+    </form>
+</body>
+</html>

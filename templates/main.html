@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="main">
+        <title>Todo app</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+
+    <body>
+        <h2>Todo App</h2>
+        {% if login %}
+            <form action="/tasks" method="post">
+                <label for="task">Task name:</label>
+                <br>
+                <br>
+                <input type="text" id="task" name="task_name" placeholder="Enter name of task">
+                <br>
+                <br>
+                <label for="message">Message:</label>
+                <br>
+                <br>
+                <input type="text" id="message" name="task_message" placeholder="Enter first message">
+                <br>
+                <br>
+                <label for="message2">Message:</label>
+                <br>
+                <br>
+                <input type="text" id="message2" name="task_message2" placeholder="Enter second message">
+                <br>
+                <br>
+                <label for="check">Check message:</label>
+                <input type="checkbox" id="check" name="task_check" >
+                <br>
+                <br>
+                <button type="submit">Enter task</button>
+            </form>
+            <br>
+            <br>
+
+            <button class="btn btn-danger">
+                <a href="/all-tasks">Go to all tasks</a>
+            </button>
+
+            <button class="btn btn-danger">
+                <a href="all-tasks-t">Go to backoffice</a>
+            </button>
+        {% else %}
+            If you want to use this app please login to the site <a href="/login">Login here</a>
+            If you don't have account you can register here <a href="/registration">Register</a>
+        {% endif %}
+    </body>
+</html>
